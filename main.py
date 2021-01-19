@@ -50,3 +50,34 @@ def ajout_point2d(p_1,p_2):
   coord=tuple(x+y for x,y in zip(p_1,p_2))
   return Point2D._make(coord)
 print(f"Addition ok: {ajout_point2d(p1,p2)==Point2D(1,1)}")
+
+Point3D = namedtuple("Point3D","x y z")
+
+def ajout_point3d(p_1,p_2):
+  return Point3D._make((p1+p2 for p1,p2 in zip(p_1,p_2)))
+
+p3_1= Point3D(0,0,1)
+p3_2= Point3D(0,0,1)
+
+print(ajout_point3d(p3_1,p3_2))
+
+class Point1D:
+  def _init_(self, x) : 
+    self.x=x
+
+np1d= Point1D(0.9)
+print(np1d)
+
+def afficher_point1d(point):
+  print (f"Point: {point.x}")
+
+
+
+liste=[]
+print(liste)
+
+liste.append('a')
+print(liste)
+
+liste.append('b')
+print(liste)
